@@ -1,0 +1,23 @@
+:root {
+  --font-size: 16px;
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --primary: #0f172a;
+  --radius: 0.625rem;
+}
+
+@layer base {
+  * {
+    @apply border-slate-200 outline-slate-400/50;
+  }
+  body {
+    @apply bg-white text-slate-900 antialiased;
+  }
+  html {
+    font-size: var(--font-size);
+  }
+  /* RU: 24-часовой формат времени (для EN позже — AM/PM) */
+  input[type="time"]::-webkit-datetime-edit-ampm-field {
+    display: none;
+  }
+}
